@@ -1,0 +1,14 @@
+Fazer o Download:
+
+https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+
+Sysmon64.exe -accepteula -i sysmonconfig-export.xml
+
+
+<localfile>
+<location>Microsoft-Windows-Sysmon/Operational</location>
+<log_format>eventchannel</log_format>
+</localfile>
+
+Conjunto de regra do sysmon:
+https://raw.githubusercontent.com/olibavictor/OpenSoC/refs/heads/main/Wazuh/rules/2030-sysmon-rules.xml

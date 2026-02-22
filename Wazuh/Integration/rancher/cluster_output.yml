@@ -1,0 +1,22 @@
+apiVersion: logging.banzaicloud.io/v1beta1
+kind: ClusterOutput
+metadata:
+  name: "wazuh-remote-syslog"
+  namespace: "cattle-logging-system"
+spec:
+  syslog:
+    buffer:
+      flush_interval: 5s
+      timekey: 1s
+      timekey_use_utc: true
+      timekey_wait: 0s
+      total_limit_size: 512MB
+    format:
+      app_name_field: test
+      type: json
+    host: <adicione o endereço>
+    insecure: true
+    port: 514
+    transport: udp
+status:
+  active: true
